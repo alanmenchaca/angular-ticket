@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="form-container">
+        <header>
+            <img class="sep-logo" src="../../assets/img/sep-logo.png" width="284" height="213" alt="sep-logo">
+            <h1>Ticket de turno</h1>
+        </header>
+        <form [formGroup]="myForm" id="form" class="form-data" action="https://httpbin.org/get" method="get">
+            <div class="text-box">
+                <div class="user-data">
+                    <div class="user-data-row">
+                        <label class="label" for="curp">CURP:</label>
+                        <input type="text" id="curp" autofocus autocomplete="on"
+                               name="curp" formControlName="curp">
+                        <p *ngIf="checkTextInput('curp')"
+                           id="curp-error" class="input-error">
+                            * La CURP debe contener 18 caracteres.
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="complete-name">Nombre:</label>
+                        <input type="text" id="complete-name" autocomplete="on"
+                               name="complete-name" formControlName="completeName">
+                        <p *ngIf="checkTextInput('completeName')"
+                           id="complete-name-error" class="input-error">
+                            * El nombre debe contener solo letras (al menos 3 caracteres) y espacios.
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="last-name-paternal">Apellido Paterno:</label>
+                        <input type="text" id="last-name-paternal" autocomplete="on"
+                               name="last-name-paternal" formControlName="lastNamePaternal">
+                        <p *ngIf="checkTextInput('lastNamePaternal')"
+                           id="last-name-paternal-error" class="input-error">
+                            * El apellido materno debe contener solo letras (al menos 3 caracteres) y espacios.
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="last-name-maternal">Apellido Materno:</label>
+                        <input type="text" id="last-name-maternal" autocomplete="on"
+                               name="last-name-maternal" formControlName="lastNameMaternal">
+                        <p *ngIf="checkTextInput('lastNameMaternal')"
+                           id="last-name-maternal-error" class="input-error">
+                            * El apellido paterno debe contener solo letras (al menos 3 caracteres) y espacios.
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="house-phone">Teléfono:</label>
+                        <input type="text" id="house-phone" autocomplete="on"
+                               name="house-phone" formControlName="housePhone">
+                        <p *ngIf="checkTextInput('housePhone')"
+                           id="house-phone-error" class="input-error">
+                            * El teléfono debe contener solo números (10 dígitos).
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="cell-phone">Celular:</label>
+                        <input type="text" id="cell-phone" autocomplete="on"
+                               name="cell-phone" formControlName="cellPhone">
+                        <p *ngIf="checkTextInput('cellPhone')"
+                           id="cell-phone-error" class="input-error">
+                            * El teléfono celular debe contener solo números (10 dígitos).
+                        </p>
+                    </div>
+                    <div class="user-data-row">
+                        <label class="label" for="email">Correo electrónico:</label>
+                        <input type="text" id="email" autocomplete="on"
+                               name="email" formControlName="email">
+                        <p *ngIf="checkTextInput('email')"
+                           id=" email-error" class="input-error">
+                            * El formato del correo electrónico debe ser valido: john_doe@gmail.com
+                        </p>
+                    </div>
+                    <div class="user-data-row"></div>
+                </div>
+            </div>
+            <div class="check-box-section">
+                <div class="checkbox-row">
+                    <label class="label" for="select-level">
+                        - ¿Nivel al que desea ingresar o que ya cursa el alumno?
+                    </label>
+                    <select id="select-level">
+                        <option>Nivel 1</option>
+                        <option>Nivel 2</option>
+                        <option>Nivel 3</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="checkbox-row">
+                    <label class="label" for="select-mun">
+                        - Municipio donde desea estudie el alumno:
+                    </label>
+                    <select id="select-mun">
+                        <option>Municipio 1</option>
+                        <option>Municipio 2</option>
+                        <option>Municipio 3</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="checkbox-row">
+                    <label class="label" for="select">
+                        - Seleccione el asunto que va a tratar:
+                    </label>
+                    <select id="select">
+                        <option>Asunto 1</option>
+                        <option>Asunto 2</option>
+                        <option>Asunto 3</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="button-section">
+            <button id="submit-btn" type="submit" [disabled]="!myForm.valid">Generar Turno</button>
+        </div>
+    </div>
+</div>

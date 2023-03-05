@@ -1,0 +1,117 @@
+/* ******** HEADER ******** */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1D2D44;
+}
+
+main {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    color: white;
+    background-color: #3E5C76;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #0D1321;
+    border: dimgrey solid 1px;
+}
+
+img.sep-logo {
+    height: 5rem;
+    width: 9rem;
+    /*position: relative;*/
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+.user-data {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    position: relative;
+    padding: 1rem;
+}
+
+.user-data-row {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    width: 40%;
+}
+
+input[type="text"] {
+    padding-left: 0.4rem;
+    border-radius: 0.4rem;
+    border-color: rgb(0, 0, 0, .3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .3);
+    height: 3rem;
+}
+
+.label {
+    padding-left: 10px;
+}
+
+.check-box-section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: dimgrey 1px solid;
+    padding: 1rem;
+}
+
+.checkbox-row {
+    padding: 5px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: dimgrey 1px solid;
+    padding: 0.5rem;
+}
+
+button {
+    width: 7rem;
+    height: 2.3rem;
+    margin: .5rem;
+}
+
+.form-container .input-error {
+    width: 90%;
+    margin: 1px;
+    padding: 0.5rem;
+    line-break: auto;
+    font-size: 0.75rem;
+    color: lightcoral;
+    font-weight: bold;
+}
+
+.form-container .incorrect-group {
+    border: 4px solid red;
+}
+
+.form-container .correct-group {
+    border: 4px solid green;
+}
